@@ -54,7 +54,7 @@ export class AddRecipe extends React.Component {
           </FormGroup>
         </Modal.Body>
         <Modal.Footer>
-          <Button disabled={!validRecipe} bsStyle="success" onClick={this.handleSubmit}>Save Recipe</Button>
+          <Button disabled={!validRecipe} bsStyle="success" onClick={this.handleSubmit}>Save Market Rate</Button>
         </Modal.Footer>
       </Modal>
     );
