@@ -87,17 +87,19 @@ class Marketrate extends React.Component {
         this.showEditModal(currentlyEditing);
     }
     deleteMarketrate(index) {
-        let marketrate = this.state.marketrates.slice();
-        marketrate.splice(index, 1);
+        let marketrates = this.state.marketrates;
+        
+        console.log(JSON.stringify(marketrates));
+        console.log((marketrates[index]));
+        console.log(marketrates[index]._id);
 
-        axios.delete('http://localhost:3001/delete/:id', marketrate)
-            .then(res => {
-                console.log(res);
-                console.log(res.data);
-            });
-
+        var url= 'http://localhost:3001/delete/'+marketrates[index]._id;
+        console.log(url);
+        axios.delete(url);
+          
+        marketrates.splice(index, 1);
         //localStorage.setItem('marketrates', JSON.stringify(marketrate));
-        this.setState({ marketrates: marketrate, currentlyEditing: 0 });
+        this.setState({ marketrates: marketrates, currentlyEditing: 0 });
     }
 
     render() {
