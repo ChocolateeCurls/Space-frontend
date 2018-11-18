@@ -81,7 +81,7 @@ class Marketrate extends React.Component {
             .then(res => {
                 console.log(marketrate);
                 console.log(res);
-                console.log(res.data);
+                console.log(res.data); 
             });
         this.setState({ marketrates: marketrate });
         this.showEditModal(currentlyEditing);
