@@ -2,13 +2,17 @@
   "name": "recipe-box",
   "version": "0.1.0",
   "private": true,
-  "main": "server.js",
+  "start": "index.js",
+  "type": "chrome",
   "homepage": "https://ChocolateeCurls.github.io/recipe-box",
   "dependencies": {
+    "axios": "0.18.0",
+    "object.map": "^1.0.1",
     "react": "^16.4.0",
     "react-bootstrap": "^0.32.1",
-    "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4"
+    "react-dom": "16.6.1",
+    "react-scripts": "1.1.4",
+    "reactstrap": "6.5.0"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -20,5 +24,6 @@
   },
   "devDependencies": {
     "gh-pages": "^1.2.0"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }
